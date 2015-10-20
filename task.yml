@@ -1,0 +1,11 @@
+---
+platform: linux
+
+image: docker:///fellah/gitbook
+
+inputs:
+- name: book-repo
+
+run:
+  path: gitbook
+  args: ["build", book-repo/, book-repo/output]
